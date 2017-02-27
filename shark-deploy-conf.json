@@ -1,0 +1,10 @@
+{
+    "product": "shark-angular2",
+    "openurl": "http://support.163.com:9000/",
+    "staticVersion": "/20170223",
+    "mimgURLPrefix": {
+        "develop": "http://localhost:9100/hxm",
+        "online": "//mailpub.nosdn.127.net/hxm",
+        "test": "//nos.netease.com/mailpub-test/hxm"
+    }
+}
