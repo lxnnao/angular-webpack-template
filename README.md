@@ -27,5 +27,5 @@ After npm installation run script:
 
 build this porject run script:
 
-    $ npm run build
+    $ npm run build     (if you are a windows user,please run it in <Git Bash>)
 
