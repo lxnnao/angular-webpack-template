@@ -1,6 +1,7 @@
 import { enableProdMode } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
+import { SharkModule } from '@ntesmail/shark-angular2';
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
@@ -32,7 +33,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes, { useHash: true })],
+    imports: [BrowserModule, FormsModule, SharkModule, RouterModule.forRoot(appRoutes, { useHash: true })],
     declarations: [AppComponent, HomeComponent],
     bootstrap: [AppComponent]
 })

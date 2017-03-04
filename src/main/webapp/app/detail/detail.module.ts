@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SharkModule } from '@ntesmail/shark-angular2';
 import { RouterModule } from '@angular/router';
 /***********components***************/
 import { DetailComponent } from './detail.component';
@@ -9,7 +10,7 @@ const routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forChild(routes)
+        SharkModule, RouterModule.forChild(routes)
     ],
     declarations: [DetailComponent]
 })

@@ -1,4 +1,69 @@
-<div class="m-detail">
-    <a href="#/home">去首页</a>
-	<img src="../../assets/img/detail.jpg">
+<a class="btn btn-info form-control" href="#/home">返回登录页</a>
+<a class="btn btn-link" href="http://shark.mail.netease.com/shark-angular2/index.html" target="_blank">更多shark-angular的demo请访问：http://shark.mail.netease.com/shark-angular2/index.html</a>
+<div shark-tabs [initTab]=1>
+    <ul class="nav nav-tabs">
+        <li>
+            <a href="javascript:void(0);">Tree</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">pager</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">selecter</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">fileupload</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane">
+            <div shark-tree #tree="shark-tree" [data]="treeData" [checkable]=true [autolink]=true [preExpand]=true></div>
+            <button class="btn btn-default" (click)="checkAll();">全选</button>
+            <button class="btn btn-default" (click)="reverseCheckAll();">反选</button>
+            <button class="btn btn-default" (click)="checkNo();">不选</button>
+        </div>
+        <div class="tab-pane">
+            <div shark-pager 
+                [currentPage]="pagination.page" 
+                [totalPage]="pagination.totalPage" 
+                [gopage]=true
+                [hl]="hl"
+                [segmentSize]=5 
+                [startFrom]=1
+            >
+            </div>
+        </div>
+        <div class="tab-pane">
+            <p>下拉框的值：{{selecterValue}}</p>
+            <div 
+                shark-selecter 
+                [data]="selecterData" 
+                [actualKey]="'value'" 
+                [displayKey]="'name'" 
+                [(model)]="selecterValue"
+            >
+            </div>
+        </div>
+        <div class="tab-pane">
+            <div class="btn btn-default"
+            shark-fileupload 
+            #uploader="shark-fileupload" 
+            [accept]="'image/*,video/*'" 
+            [autoupload]=false 
+            [dragable]=true 
+            (onSelected)="onSelected($event)" 
+            (onUploading)="onUploading($event)" 
+            (onUploaded)="onUploaded($event)" 
+            (onFailed)="onFailed($event)" 
+            >
+            请选择图片或视频
+            </div>
+            <h3>
+                已选择：{{file}}&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-sm btn-primary" (click)="startUpload(uploader);">
+                    开始上传
+                </button>
+            </h3>
+        </div>
+    </div>
 </div>

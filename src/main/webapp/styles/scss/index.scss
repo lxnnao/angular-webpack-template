@@ -1,11 +1,2 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    height: 800px;
-    background-image: url(../../assets/img/body.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+@import 'node_modules/@ntesmail/shark-css/src/main/webapp/style/scss/examples/example';
+@import 'test';

@@ -9,7 +9,7 @@ var ngtools = require('@ngtools/webpack');
 module.exports = {
     entry: {
         bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts'],
-        lib: ['@angular/core', '@angular/platform-browser', '@angular/common', '@angular/router', '@angular/forms', '@angular/http'],
+        lib: ['@angular/core', '@angular/platform-browser', '@angular/common', '@angular/router', '@angular/forms', '@angular/http', 'jquery', '@ntesmail/shark-angular2'],
         polyfill: [__dirname + '/src/main/webapp/polyfill.ts']
     },
     output: {
@@ -43,7 +43,7 @@ module.exports = {
                 exclude: [
                     path.join(__dirname, 'src/main/webapp/app')
                 ],
-                loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!sass-loader' })
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
             },
             {
                 test: /\.scss$/,
@@ -76,6 +76,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: __dirname + '/src/main/webapp/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['bootstrap', 'lib', 'polyfill']

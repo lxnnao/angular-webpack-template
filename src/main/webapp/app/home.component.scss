@@ -1,10 +1,31 @@
-.m-home {
-    a {
-        color: red !important;
-        background-image: url(../assets/img/home-bg.jpg);
-    }
-    img {
-        width: 200px;
-        height: 200px;
-    }
+.u-home-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #588bc4;
+    background-image: url(../assets/img/login-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.g-body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.m-login-form {
+    border-radius: 8px;
+    border: 1px solid #666666;
+    background-color: rgba(13, 13, 13, 0.25);
+    color: #efefef;
+    width: 450px;
+    margin: auto;
+    padding: 15px;
 }

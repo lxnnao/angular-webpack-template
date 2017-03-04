@@ -24,33 +24,16 @@ app.use(webpackHotMiddleware(compiler, {
     reload: true
 }));
 
-app.use(function (req, res, next) {
-    var mockPath = path.join(__dirname, './src/test/mock');
-    var reqPath = req.path;
 
-    if (!/\.(do|json)/.test(reqPath)) {
-        return next();
-    }
-
-    if (req.complete) {
-        sendResponse();
+//font
+app.use('/font', express.static(path.join(__dirname, 'font')));
+//ajax mock
+app.use('/xhr', function (req, res) {
+    var data = path.join(__dirname, 'test/mock/xhr', req.path);
+    if (fs.existsSync(data)) {
+        res.send(fs.readFileSync(data));
     } else {
-        req.on('data', function (chunk) {
-
-        });
-
-        req.on('end', function (chunk) {
-            sendResponse();
-        });
-    }
-
-    function sendResponse() {
-        var mockFile = path.join(mockPath, reqPath);
-        if (fs.existsSync(mockFile)) {
-            res.send(fs.readFileSync(mockFile, 'utf-8'));
-        } else {
-            next();
-        }
+        res.status(404).send('file not exist !');
     }
 });
 
