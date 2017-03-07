@@ -1,4 +1,4 @@
-import { Component,ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SharkToastrService } from '@ntesmail/shark-angular2';
 
 @Component({
@@ -10,8 +10,9 @@ export class DetailComponent {
     constructor(
         private sharkToastrService: SharkToastrService
     ) { }
-//  tree配置
+    //  tree配置
     @ViewChild('tree') treeDirective: any;
+    toolTipContent = '<span style="color:#ff0000">no permission</span><br/>please modify permission.ts';
     treeData: any = [{
         node_id: '1',
         node_name: '网易',
@@ -28,17 +29,39 @@ export class DetailComponent {
     }];
     preSelectsNodes = ['1-1', '1-3'];
     checkAll() {
-        this.treeDirective.tree.checkAll();
+        // sync
+        // var permission = require('./permission');
+        // if (permission.checkAll) {
+        //     this.treeDirective.tree.checkAll();
+        // }
+
+        // async
+        (require as any).ensure([], () => {
+            var permission = require('./permission');
+            if (permission.checkAll) {
+                this.treeDirective.tree.checkAll();
+            }
+        });
     };
     reverseCheckAll() {
-        this.treeDirective.tree.reverseCheck();
+        (require as any).ensure([], () => {
+            var permission = require('./permission');
+            if (permission.reverseCheckAll) {
+                this.treeDirective.tree.reverseCheck();
+            }
+        });
     };
     checkNo() {
-        this.treeDirective.tree.checkNo();
+        (require as any).ensure([], () => {
+            var permission = require('./permission');
+            if (permission.checkNo) {
+                this.treeDirective.tree.checkNo();
+            }
+        });
     };
 
-//  pager配置
-    pagination= {
+    //  pager配置
+    pagination = {
         page: 5,
         totalPage: 100
     };
@@ -50,7 +73,7 @@ export class DetailComponent {
         gopage: 'go'
     };
 
-//  selecter配置
+    //  selecter配置
     selecterValue: number = 1001;
     selecterData: any = [
         {
@@ -64,7 +87,7 @@ export class DetailComponent {
             name: '二年级'
         }
     ];
-//  fileupload配置
+    //  fileupload配置
     file: any;
     onSelected(evt) {
         this.file = evt.data.file.name;
