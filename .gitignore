@@ -2,5 +2,3 @@
 /.tmp/*
 /build/*
 /node_modules/*
-/aot-js/*
-/aot-ts/*

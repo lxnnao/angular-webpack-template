@@ -5,7 +5,6 @@ var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var openurl = require('openurl');
-var argv = require('yargs').argv;
 var webpackDevConfig = require('./webpack.dev.config');
 var config = require('./shark-deploy-conf.json');
 

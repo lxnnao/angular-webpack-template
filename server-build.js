@@ -6,7 +6,7 @@ var path = require('path');
 
 var app = express();
 app.use(compression());
-app.use(express.static('build'));
+app.use(express.static('build/client'));
 //font
 app.use('/font', express.static(path.join(__dirname, 'font')));
 //ajax mock
