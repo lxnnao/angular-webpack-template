@@ -52,9 +52,6 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            }, {
-                test: /\.ejs$/,
-                loader: 'ejs-loader'
             }
         ]
     },
@@ -82,11 +79,11 @@ module.exports = {
             jQuery: "jquery"
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['bootstrap', 'angular', 'polyfill']
+            name: ['bootstrap', 'angular', 'polyfill', 'jquery']
         }),
         new ngtools.AotPlugin({
             skipCodeGeneration: false,   //默认false. false：使用AoT ; true：不使用AoT 
-            tsConfigPath: './tsconfig.json'
+            tsConfigPath: path.join(__dirname, 'tsconfig.json')
         })
     ]
 }

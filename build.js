@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-var webpackconf = require('./webpack.build.config');
+var webpackconf = require('./webpack.build.config.js');
 
 webpack(webpackconf, function (err, states) {
     if (err) {

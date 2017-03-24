@@ -78,11 +78,11 @@ module.exports = {
             jQuery: "jquery"
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['bootstrap', 'angular', 'polyfill']
+            name: ['bootstrap', 'angular', 'polyfill', 'jquery']
         }),
         new ngtools.AotPlugin({
             skipCodeGeneration: true,   //默认false. false：使用AoT ; true：不使用AoT 
-            tsConfigPath: './tsconfig.json'
+            tsConfigPath: path.join(__dirname, 'tsconfig.json')
         })
     ],
     devtool: 'source-map' //'cheap-module-source-map' | 'source-map'
