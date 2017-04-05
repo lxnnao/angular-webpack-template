@@ -12,16 +12,13 @@ var config = {
     entry: {
         polyfills: ['zone.js/dist/zone', 'reflect-metadata'],
         bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts', 'webpack-hot-middleware/client'],
-        vendor: ['jquery']
+        thirdparty: ['jquery']
     },
     output: {
         path: path.join(__dirname, 'build', 'client'),
         filename: 'js/[name].js',
-        chunkFilename: "js/chunk-[id].js",
-        publicPath: '/',
-        sourceMapFilename: '[name].map',
-        library: '[name]',
-        libraryTarget: 'var',
+        chunkFilename: 'js/chunk-[id].js',
+        publicPath: 'http://localhost:9000/'
     },
     module: {
         rules: [{
@@ -29,9 +26,9 @@ var config = {
             use: [{
                 loader: '@angularclass/hmr-loader'
             }, {
-                loader: 'ng-router-loader'
-            }, {
                 loader: 'awesome-typescript-loader'
+            }, {
+                loader: 'angular2-router-loader'
             }, {
                 loader: 'angular2-template-loader'
             }]
@@ -93,39 +90,28 @@ var config = {
         new DefinePlugin({
             'ENV': '"dev"'
         }),
-        new DllBundlesPlugin({
-            bundles: {
-                angular: [
-                    '@angular/core',
-                    '@angular/platform-browser',
-                    '@angular/platform-browser-dynamic',
-                    '@angular/common',
-                    '@angular/router',
-                    '@angular/http',
-                    '@angular/forms',
-                    '@ntesmail/shark-angular2'
-                ]
-            },
-            dllDir: path.join(__dirname, 'src/main/webapp/lib'),
-            webpackConfig: webpackMerge(config, {
-                devtool: 'source-map',
-                plugins: []
-            })
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['bootstrap', 'polyfill', 'vendor']
-        }),
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: __dirname + '/src/main/webapp/index.ejs'
         }),
-        new AddAssetHtmlPlugin([{
-            filepath: path.join(__dirname, `src/main/webapp/lib/${DllBundlesPlugin.resolveFile('angular')}`)
-        }]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: [
+                'bootstrap',
+                'polyfill',
+                'thirdparty'
+            ]
+        }),
+        new AddAssetHtmlPlugin([
+            { filepath: require.resolve('./dll/angular.dll.js') }
+        ]),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require(path.join(__dirname, 'dll/angular-manifest.json'))
         })
     ],
     devtool: 'source-map' //'cheap-module-source-map' | 'source-map'
