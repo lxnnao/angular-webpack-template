@@ -108,7 +108,7 @@ var config = {
             },
             dllDir: path.join(__dirname, 'src/main/webapp/lib'),
             webpackConfig: webpackMerge(config, {
-                devtool: 'cheap-module-source-map',
+                devtool: 'source-map',
                 plugins: []
             })
         }),
@@ -126,13 +126,9 @@ var config = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }),
-        // new ngtools.AotPlugin({
-        //     skipCodeGeneration: true, //默认false. false：使用AoT ; true：不使用AoT 
-        //     tsConfigPath: path.join(__dirname, 'tsconfig.json')
-        // })
+        })
     ],
-    devtool: 'cheap-module-source-map' //'cheap-module-source-map' | 'source-map'
+    devtool: 'source-map' //'cheap-module-source-map' | 'source-map'
 };
 
 module.exports = config;

@@ -6,7 +6,6 @@ var path = require('path');
 var express = require('express');
 var openurl = require('openurl');
 var webpackDevConfig = require('./webpack.dev.config');
-//var webpackDevConfig = require('./webpack.dll.config');
 var config = require('./shark-deploy-conf.json');
 
 var compiler = webpack(webpackDevConfig);

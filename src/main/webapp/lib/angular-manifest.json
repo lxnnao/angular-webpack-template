@@ -1,7 +1,7 @@
 {
   "name": "angular_lib",
   "content": {
-    "./node_modules/.4.0.1@@angular/core/@angular/core.es5.js": {
+    "./node_modules/@angular/core/@angular/core.es5.js": {
       "id": 0,
       "meta": {
         "harmonyModule": true
@@ -206,15 +206,15 @@
         "ɵx"
       ]
     },
-    "./node_modules/.5.2.0@rxjs/Observable.js": {
+    "./node_modules/rxjs/Observable.js": {
       "id": 1,
       "meta": {}
     },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/common/core.js": {
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/common/core.js": {
       "id": 2,
       "meta": {}
     },
-    "./node_modules/.4.0.1@@angular/common/@angular/common.es5.js": {
+    "./node_modules/@angular/common/@angular/common.es5.js": {
       "id": 3,
       "meta": {
         "harmonyModule": true
@@ -269,27 +269,27 @@
         "ɵb"
       ]
     },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/common/base.js": {
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/common/base.js": {
       "id": 4,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/Subscriber.js": {
+    "./node_modules/rxjs/Subscriber.js": {
       "id": 5,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/common/config.service.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/common/config.service.js": {
       "id": 6,
       "meta": {}
     },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/common/templates.js": {
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/common/templates.js": {
       "id": 7,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/root.js": {
+    "./node_modules/rxjs/util/root.js": {
       "id": 8,
       "meta": {}
     },
-    "./node_modules/.4.0.1@@angular/platform-browser/@angular/platform-browser.es5.js": {
+    "./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js": {
       "id": 9,
       "meta": {
         "harmonyModule": true
@@ -342,140 +342,136 @@
         "ɵe"
       ]
     },
-    "./node_modules/.5.2.0@rxjs/Subject.js": {
+    "./node_modules/rxjs/Subject.js": {
       "id": 10,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/OuterSubscriber.js": {
+    "./node_modules/rxjs/OuterSubscriber.js": {
       "id": 11,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/Subscription.js": {
+    "./node_modules/rxjs/Subscription.js": {
       "id": 12,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/subscribeToResult.js": {
+    "./node_modules/rxjs/util/subscribeToResult.js": {
       "id": 13,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/common/common.service.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/common/common.service.js": {
       "id": 14,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/modal/sharkmodal.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/modal/sharkmodal.js": {
       "id": 15,
       "meta": {}
     },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/listgroup.ui.js": {
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/listgroup.ui.js": {
       "id": 16,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/ArrayObservable.js": {
+    "./node_modules/rxjs/observable/ArrayObservable.js": {
       "id": 17,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/EmptyObservable.js": {
+    "./node_modules/rxjs/observable/EmptyObservable.js": {
       "id": 18,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/mergeAll.js": {
+    "./node_modules/rxjs/operator/mergeAll.js": {
       "id": 19,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/symbol/iterator.js": {
+    "./node_modules/rxjs/symbol/iterator.js": {
       "id": 20,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/symbol/observable.js": {
+    "./node_modules/rxjs/symbol/observable.js": {
       "id": 21,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/symbol/rxSubscriber.js": {
+    "./node_modules/rxjs/symbol/rxSubscriber.js": {
       "id": 22,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/EmptyError.js": {
+    "./node_modules/rxjs/util/EmptyError.js": {
       "id": 23,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isArray.js": {
+    "./node_modules/rxjs/util/isArray.js": {
       "id": 24,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/modal/modal.service.js": {
+    "./node_modules/@angular/core/@angular async recursive": {
       "id": 25,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/toastr/toastr.service.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/modal/modal.service.js": {
       "id": 26,
       "meta": {}
     },
-    "./node_modules/.2.3.2@webpack/buildin/global.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/toastr/toastr.service.js": {
       "id": 27,
       "meta": {}
     },
-    "./node_modules/.4.0.1@@angular/core/@angular async recursive": {
+    "./node_modules/rxjs/Observer.js": {
       "id": 28,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/Observer.js": {
+    "./node_modules/rxjs/observable/PromiseObservable.js": {
       "id": 29,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/PromiseObservable.js": {
+    "./node_modules/rxjs/observable/ScalarObservable.js": {
       "id": 30,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/ScalarObservable.js": {
+    "./node_modules/rxjs/observable/fromPromise.js": {
       "id": 31,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/fromPromise.js": {
+    "./node_modules/rxjs/operator/map.js": {
       "id": 32,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/map.js": {
+    "./node_modules/rxjs/operator/mergeMap.js": {
       "id": 33,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/mergeMap.js": {
+    "./node_modules/rxjs/util/ObjectUnsubscribedError.js": {
       "id": 34,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/ObjectUnsubscribedError.js": {
+    "./node_modules/rxjs/util/errorObject.js": {
       "id": 35,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/errorObject.js": {
+    "./node_modules/rxjs/util/isArrayLike.js": {
       "id": 36,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isArrayLike.js": {
+    "./node_modules/rxjs/util/isFunction.js": {
       "id": 37,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isFunction.js": {
+    "./node_modules/rxjs/util/isObject.js": {
       "id": 38,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isObject.js": {
+    "./node_modules/rxjs/util/isPromise.js": {
       "id": 39,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isPromise.js": {
+    "./node_modules/rxjs/util/isScheduler.js": {
       "id": 40,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/isScheduler.js": {
+    "./node_modules/webpack/buildin/global.js": {
       "id": 41,
       "meta": {}
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/index.js": {
+    "./node_modules/@angular/forms/@angular/forms.es5.js": {
       "id": 42,
-      "meta": {}
-    },
-    "./node_modules/.4.0.1@@angular/forms/@angular/forms.es5.js": {
-      "id": 43,
       "meta": {
         "harmonyModule": true
       },
@@ -553,8 +549,8 @@
         "ɵr"
       ]
     },
-    "./node_modules/.4.0.1@@angular/http/@angular/http.es5.js": {
-      "id": 44,
+    "./node_modules/@angular/http/@angular/http.es5.js": {
+      "id": 43,
       "meta": {
         "harmonyModule": true
       },
@@ -594,8 +590,8 @@
         "ɵd"
       ]
     },
-    "./node_modules/.4.0.1@@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js": {
-      "id": 45,
+    "./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js": {
+      "id": 44,
       "meta": {
         "harmonyModule": true
       },
@@ -607,8 +603,8 @@
         "ɵResourceLoaderImpl"
       ]
     },
-    "./node_modules/.4.0.1@@angular/router/@angular/router.es5.js": {
-      "id": 46,
+    "./node_modules/@angular/router/@angular/router.es5.js": {
+      "id": 45,
       "meta": {
         "harmonyModule": true
       },
@@ -665,156 +661,12 @@
         "ɵl"
       ]
     },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/autocomplete/autocomplete.directive.js": {
+    "./node_modules/@ntesmail/shark-angular2/index.js": {
+      "id": 46,
+      "meta": {}
+    },
+    "./node_modules/@angular/compiler/@angular/compiler.es5.js": {
       "id": 47,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/autocomplete/autocomplete.module.js": {
-      "id": 48,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/common/common.pipes.js": {
-      "id": 49,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/dropdown/dropdown.directive.js": {
-      "id": 50,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/dropdown/dropdown.module.js": {
-      "id": 51,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/fileupload/fileupload.directive.js": {
-      "id": 52,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/fileupload/fileupload.module.js": {
-      "id": 53,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/index.js": {
-      "id": 54,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/modal/modal.module.js": {
-      "id": 55,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/pager/pager.directive.js": {
-      "id": 56,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/pager/pager.module.js": {
-      "id": 57,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/popover/popover.directive.js": {
-      "id": 58,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/popover/popover.module.js": {
-      "id": 59,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/selecter/selecter.directive.js": {
-      "id": 60,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/selecter/selecter.module.js": {
-      "id": 61,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/shark-module.js": {
-      "id": 62,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tabs/tabs.directive.js": {
-      "id": 63,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tabs/tabs.module.js": {
-      "id": 64,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tooltip/tooltip.directive.js": {
-      "id": 65,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tooltip/tooltip.module.js": {
-      "id": 66,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tree/tree.directive.js": {
-      "id": 67,
-      "meta": {}
-    },
-    "./node_modules/.1.2.1@@ntesmail/shark-angular2/src/main/webapp/script/components/tree/tree.module.js": {
-      "id": 68,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/index.js": {
-      "id": 69,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/autocomplete.ui.js": {
-      "id": 70,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/dropdown.ui.js": {
-      "id": 71,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/fileupload-ie9.ui.js": {
-      "id": 72,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/fileupload.ui.js": {
-      "id": 73,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/modal.ui.js": {
-      "id": 74,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/pager.ui.js": {
-      "id": 75,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/popover.ui.js": {
-      "id": 76,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/selecter.ui.js": {
-      "id": 77,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/tabs.ui.js": {
-      "id": 78,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/toastr.ui.js": {
-      "id": 79,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/tree-checkable.ui.js": {
-      "id": 80,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/tree-selectable.ui.js": {
-      "id": 81,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/components/tree.ui.js": {
-      "id": 82,
-      "meta": {}
-    },
-    "./node_modules/.1.4.1@@ntesmail/shark-ui/src/main/webapp/js/shark.ui.js": {
-      "id": 83,
-      "meta": {}
-    },
-    "./node_modules/.4.0.1@@angular/compiler/@angular/compiler.es5.js": {
-      "id": 84,
       "meta": {
         "harmonyModule": true
       },
@@ -999,115 +851,263 @@
         "removeSummaryDuplicates"
       ]
     },
-    "./node_modules/.5.2.0@rxjs/BehaviorSubject.js": {
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/autocomplete/autocomplete.directive.js": {
+      "id": 48,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/autocomplete/autocomplete.module.js": {
+      "id": 49,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/common/common.pipes.js": {
+      "id": 50,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/dropdown/dropdown.directive.js": {
+      "id": 51,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/dropdown/dropdown.module.js": {
+      "id": 52,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/fileupload/fileupload.directive.js": {
+      "id": 53,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/fileupload/fileupload.module.js": {
+      "id": 54,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/index.js": {
+      "id": 55,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/modal/modal.module.js": {
+      "id": 56,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/pager/pager.directive.js": {
+      "id": 57,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/pager/pager.module.js": {
+      "id": 58,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/popover/popover.directive.js": {
+      "id": 59,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/popover/popover.module.js": {
+      "id": 60,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/selecter/selecter.directive.js": {
+      "id": 61,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/selecter/selecter.module.js": {
+      "id": 62,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/shark-module.js": {
+      "id": 63,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tabs/tabs.directive.js": {
+      "id": 64,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tabs/tabs.module.js": {
+      "id": 65,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tooltip/tooltip.directive.js": {
+      "id": 66,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tooltip/tooltip.module.js": {
+      "id": 67,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tree/tree.directive.js": {
+      "id": 68,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-angular2/src/main/webapp/script/components/tree/tree.module.js": {
+      "id": 69,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/index.js": {
+      "id": 70,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/autocomplete.ui.js": {
+      "id": 71,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/dropdown.ui.js": {
+      "id": 72,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/fileupload-ie9.ui.js": {
+      "id": 73,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/fileupload.ui.js": {
+      "id": 74,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/modal.ui.js": {
+      "id": 75,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/pager.ui.js": {
+      "id": 76,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/popover.ui.js": {
+      "id": 77,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/selecter.ui.js": {
+      "id": 78,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/tabs.ui.js": {
+      "id": 79,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/toastr.ui.js": {
+      "id": 80,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/tree-checkable.ui.js": {
+      "id": 81,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/tree-selectable.ui.js": {
+      "id": 82,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/components/tree.ui.js": {
+      "id": 83,
+      "meta": {}
+    },
+    "./node_modules/@ntesmail/shark-ui/src/main/webapp/js/shark.ui.js": {
+      "id": 84,
+      "meta": {}
+    },
+    "./node_modules/rxjs/BehaviorSubject.js": {
       "id": 85,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/InnerSubscriber.js": {
+    "./node_modules/rxjs/InnerSubscriber.js": {
       "id": 86,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/Notification.js": {
+    "./node_modules/rxjs/Notification.js": {
       "id": 87,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/SubjectSubscription.js": {
+    "./node_modules/rxjs/SubjectSubscription.js": {
       "id": 88,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/ArrayLikeObservable.js": {
+    "./node_modules/rxjs/observable/ArrayLikeObservable.js": {
       "id": 89,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/ConnectableObservable.js": {
+    "./node_modules/rxjs/observable/ConnectableObservable.js": {
       "id": 90,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/ForkJoinObservable.js": {
+    "./node_modules/rxjs/observable/ForkJoinObservable.js": {
       "id": 91,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/FromObservable.js": {
+    "./node_modules/rxjs/observable/FromObservable.js": {
       "id": 92,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/IteratorObservable.js": {
+    "./node_modules/rxjs/observable/IteratorObservable.js": {
       "id": 93,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/forkJoin.js": {
+    "./node_modules/rxjs/observable/forkJoin.js": {
       "id": 94,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/from.js": {
+    "./node_modules/rxjs/observable/from.js": {
       "id": 95,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/merge.js": {
+    "./node_modules/rxjs/observable/merge.js": {
       "id": 96,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/observable/of.js": {
+    "./node_modules/rxjs/observable/of.js": {
       "id": 97,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/catch.js": {
+    "./node_modules/rxjs/operator/catch.js": {
       "id": 98,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/concatAll.js": {
+    "./node_modules/rxjs/operator/concatAll.js": {
       "id": 99,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/concatMap.js": {
+    "./node_modules/rxjs/operator/concatMap.js": {
       "id": 100,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/every.js": {
+    "./node_modules/rxjs/operator/every.js": {
       "id": 101,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/filter.js": {
+    "./node_modules/rxjs/operator/filter.js": {
       "id": 102,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/first.js": {
+    "./node_modules/rxjs/operator/first.js": {
       "id": 103,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/last.js": {
+    "./node_modules/rxjs/operator/last.js": {
       "id": 104,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/merge.js": {
+    "./node_modules/rxjs/operator/merge.js": {
       "id": 105,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/multicast.js": {
+    "./node_modules/rxjs/operator/multicast.js": {
       "id": 106,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/observeOn.js": {
+    "./node_modules/rxjs/operator/observeOn.js": {
       "id": 107,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/reduce.js": {
+    "./node_modules/rxjs/operator/reduce.js": {
       "id": 108,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/operator/share.js": {
+    "./node_modules/rxjs/operator/share.js": {
       "id": 109,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/UnsubscriptionError.js": {
+    "./node_modules/rxjs/util/UnsubscriptionError.js": {
       "id": 110,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/toSubscriber.js": {
+    "./node_modules/rxjs/util/toSubscriber.js": {
       "id": 111,
       "meta": {}
     },
-    "./node_modules/.5.2.0@rxjs/util/tryCatch.js": {
+    "./node_modules/rxjs/util/tryCatch.js": {
       "id": 112,
       "meta": {}
     }
