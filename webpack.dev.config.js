@@ -3,16 +3,13 @@ var webpack = require('webpack');
 var DefinePlugin = require('webpack/lib/DefinePlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ngtools = require('@ngtools/webpack');
-var DllBundlesPlugin = require('webpack-dll-bundles-plugin').DllBundlesPlugin;
-var webpackMerge = require('webpack-merge').strategy({ plugins: 'replace' });
 var AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
-var config = {
+module.exports = {
     entry: {
-        polyfills: ['zone.js/dist/zone', 'reflect-metadata'],
-        bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts', 'webpack-hot-middleware/client'],
-        thirdparty: ['jquery']
+        bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts', 'webpack-hot-middleware/client?reload=true'],
+        polyfill: ['zone.js/dist/zone', 'reflect-metadata'],
+        thirdparty: ['jquery', 'flatpickr', 'echarts']
     },
     output: {
         path: path.join(__dirname, 'build', 'client'),
@@ -21,65 +18,59 @@ var config = {
         publicPath: 'http://localhost:9000/'
     },
     module: {
-        rules: [{
-            test: /\.ts$/,
-            use: [{
-                loader: '@angularclass/hmr-loader'
+        loaders: [
+            {
+                test: /\.ts$/,
+                loader: [
+                    '@angularclass/hmr-loader',
+                    'awesome-typescript-loader',
+                    'angular2-template-loader',
+                    'angular2-router-loader'
+                ]
             }, {
-                loader: 'awesome-typescript-loader'
+                test: /\.html$/,
+                loader: 'html-loader',
+                include: path.join(__dirname, 'src/main/')
             }, {
-                loader: 'angular2-router-loader'
-            }, {
-                loader: 'angular2-template-loader'
-            }]
-        }, {
-            test: /\.html$/,
-            include: path.join(__dirname, 'src/main/'),
-            use: [{
-                loader: 'html-loader'
-            }]
-        }, {
-            test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-            use: [{
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
-                options: {
+                query: {
                     name: 'images/[name].[ext]',
                     limit: 100
                 }
-            }]
-        }, {
-            test: /\.scss$/,
-            exclude: [
-                path.join(__dirname, 'src/main/webapp/app')
-            ],
-            use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
-        }, {
-            test: /\.scss$/,
-            include: [
-                path.join(__dirname, 'src/main/webapp/app')
-            ],
-            use: [{
-                loader: 'to-string-loader'
             }, {
-                loader: 'css-loader'
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             }, {
-                loader: 'sass-loader'
-            }]
-        }, {
-            test: /\.ejs$/,
-            use: [{
+                test: /\.scss$/,
+                exclude: [
+                    path.join(__dirname, 'src/main/webapp/app')
+                ],
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
+            }, {
+                test: /\.scss$/,
+                include: [
+                    path.join(__dirname, 'src/main/webapp/app')
+                ],
+                loaders: [
+                    'to-string-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+            }, {
+                test: /\.ejs$/,
                 loader: 'ejs-loader'
-            }]
-        }, {
-            test: /jquery/,
-            use: [{
-                loader: 'expose-loader',
-                options: 'jQuery'
             }, {
-                loader: 'expose-loader',
-                options: '$'
-            }]
-        }]
+                test: /jquery/,
+                use: [{
+                    loader: 'expose-loader',
+                    options: 'jQuery'
+                }, {
+                    loader: 'expose-loader',
+                    options: '$'
+                }]
+            }
+        ]
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -90,14 +81,16 @@ var config = {
         new DefinePlugin({
             'ENV': '"dev"'
         }),
-        new ExtractTextPlugin("css/[name].css"),
+        new ExtractTextPlugin('css/[name].css'),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: __dirname + '/src/main/webapp/index.ejs'
         }),
         new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
+            $: 'jquery',
+            jQuery: 'jquery',
+            Flatpickr: 'flatpickr',
+            echarts: 'echarts'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: [
@@ -115,6 +108,4 @@ var config = {
         })
     ],
     devtool: 'source-map' //'cheap-module-source-map' | 'source-map'
-};
-
-module.exports = config;
+}

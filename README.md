@@ -23,7 +23,7 @@ Clone this repository and run this command in a console:
 
 After npm installation run script:
 
-    $ npm run start     (构建可能会花费一小会儿时间，请耐心等待[wait for amoment])
+    $ npm run start     (wait for amoment)
 
 build this porject run script:
 
