@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var DefinePlugin = require('webpack/lib/DefinePlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var ngtools = require('@ngtools/webpack');
 
 module.exports = {
@@ -65,6 +66,7 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     plugins: [
+        new ProgressBarPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             comments: false,
             compress: {

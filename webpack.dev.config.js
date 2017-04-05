@@ -4,6 +4,7 @@ var DefinePlugin = require('webpack/lib/DefinePlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -76,6 +77,7 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     plugins: [
+        new ProgressBarPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new DefinePlugin({

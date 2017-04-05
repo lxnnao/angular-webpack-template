@@ -32,4 +32,5 @@ now you can start the project by
 build this porject run script:
 
     $ npm run build  
+    $ npm run server
 

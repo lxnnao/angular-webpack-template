@@ -28,7 +28,7 @@ app.use(webpackHotMiddleware(compiler));
 //font
 app.use('/font', express.static(path.join(__dirname, 'font')));
 //ajax mock
-app.use('/xhr', function(req, res) {
+app.use('/xhr', function (req, res) {
     var data = path.join(__dirname, 'test/mock/xhr', req.path);
     if (fs.existsSync(data)) {
         res.send(fs.readFileSync(data));
@@ -37,7 +37,7 @@ app.use('/xhr', function(req, res) {
     }
 });
 
-app.listen(9000, function() {
+app.listen(9000, function () {
     if (config.openurl) {
         openurl.open(config.openurl);
     }
