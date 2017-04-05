@@ -29,7 +29,11 @@ var config = {
             use: [{
                 loader: '@angularclass/hmr-loader'
             }, {
-                loader: '@ngtools/webpack'
+                loader: 'ng-router-loader'
+            }, {
+                loader: 'awesome-typescript-loader'
+            }, {
+                loader: 'angular2-template-loader'
             }]
         }, {
             test: /\.html$/,
@@ -123,10 +127,10 @@ var config = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new ngtools.AotPlugin({
-            skipCodeGeneration: true, //默认false. false：使用AoT ; true：不使用AoT 
-            tsConfigPath: path.join(__dirname, 'tsconfig.json')
-        })
+        // new ngtools.AotPlugin({
+        //     skipCodeGeneration: true, //默认false. false：使用AoT ; true：不使用AoT 
+        //     tsConfigPath: path.join(__dirname, 'tsconfig.json')
+        // })
     ],
     devtool: 'cheap-module-source-map' //'cheap-module-source-map' | 'source-map'
 };
