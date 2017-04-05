@@ -1,4 +1,5 @@
 /.vscode/*
 /.tmp/*
 /build/*
+/dll/*
 /node_modules/*

@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        angular: [path.join(__dirname, 'dll/angular.ts')]
+        angular: [path.join(__dirname, 'src/main/webapp/angular.ts')]
     },
     output: {
         path: path.join(__dirname, 'dll'),

@@ -23,9 +23,13 @@ Clone this repository and run this command in a console:
 
 After npm installation run script:
 
-    $ npm run start     (wait for amoment)
+    $ npm run dll     (only once)
+
+now you can start the project by
+
+    npm run start     (wait about 10 seconds)
 
 build this porject run script:
 
-    $ npm run build     (if you are a windows user,please run it in <Git Bash>)
+    $ npm run build  
 
