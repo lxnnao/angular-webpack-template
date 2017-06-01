@@ -23,42 +23,42 @@ module.exports = {
         loaders: [
             {
                 test: /\.ts$/,
-                loader: [
+                use: [
                     '@ngtools/webpack'
                 ]
             }, {
                 test: /\.html$/,
-                loader: 'html-loader',
+                use: 'html-loader',
                 include: path.join(__dirname, 'src/main/')
             }, {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
-                query: {
+                options: {
                     name: 'images/[name]-[hash:8].[ext]',
                     limit: 100
                 }
             }, {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
             }, {
                 test: /\.scss$/,
                 exclude: [
                     path.join(__dirname, 'src/main/webapp/app')
                 ],
-                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
+                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
             }, {
                 test: /\.scss$/,
                 include: [
                     path.join(__dirname, 'src/main/webapp/app')
                 ],
-                loaders: [
+                use: [
                     'to-string-loader',
                     'css-loader',
                     'sass-loader'
                 ]
             }, {
                 test: /\.ejs$/,
-                loader: 'ejs-loader'
+                use: 'ejs-loader'
             }
         ]
     },
