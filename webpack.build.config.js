@@ -20,33 +20,36 @@ module.exports = {
         publicPath: 'http://localhost:9000/'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.ts$/,
-                use: [
-                    '@ngtools/webpack'
-                ]
-            }, {
+                loader: '@ngtools/webpack'
+            }, 
+            {
                 test: /\.html$/,
-                use: 'html-loader',
+                loader: 'html-loader',
                 include: path.join(__dirname, 'src/main/')
-            }, {
+            }, 
+            {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     name: 'images/[name]-[hash:8].[ext]',
                     limit: 100
                 }
-            }, {
+            }, 
+            {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
-            }, {
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
+            }, 
+            {
                 test: /\.scss$/,
                 exclude: [
                     path.join(__dirname, 'src/main/webapp/app')
                 ],
-                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
-            }, {
+                loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!sass-loader' })
+            }, 
+            {
                 test: /\.scss$/,
                 include: [
                     path.join(__dirname, 'src/main/webapp/app')
@@ -56,9 +59,10 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            }, {
+            }, 
+            {
                 test: /\.ejs$/,
-                use: 'ejs-loader'
+                loader: 'ejs-loader'
             }
         ]
     },

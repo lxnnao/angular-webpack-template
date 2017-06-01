@@ -15,11 +15,9 @@ module.exports = {
         library: '[name]_library'
     },
     module: {
-        loaders: [{
+        rules: [{
             test: /\.ts$/,
-            use: [
-                'awesome-typescript-loader'
-            ]
+            loader: 'awesome-typescript-loader'
         }]
     },
     resolve: {
