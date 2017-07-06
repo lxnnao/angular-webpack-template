@@ -11,8 +11,8 @@ module.exports = {
     entry: {
         bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts'],
         angular: ['@angular/core', '@angular/platform-browser', '@angular/common', '@angular/router', '@angular/http', '@angular/forms'],
-        polyfill: ['zone.js/dist/zone', 'reflect-metadata'],
-        thirdparty: ['jquery', path.join(__dirname, 'src/main/webapp/echarts.ts'), 'bignumber.js', 'swiper', 'fastclick']
+        polyfill: ['zone.js/dist/zone', 'reflect-metadata']
+        // thirdparty: ['jquery', path.join(__dirname, 'src/main/webapp/echarts.ts'), 'bignumber.js', 'swiper', 'fastclick']
     },
     output: {
         path: path.join(__dirname, 'build', 'client'),
@@ -60,24 +60,6 @@ module.exports = {
             }, {
                 test: /\.ejs$/,
                 loader: 'ejs-loader'
-            }, {
-                test: /jquery/,
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'jQuery'
-                }, {
-                    loader: 'expose-loader',
-                    options: '$'
-                }]
-            }, {
-                test: /bignumber.js/,
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'BigNumber'
-                }]
-            }, {
-                test: require.resolve("swiper"),
-                loader: "expose-loader?Swiper"
             }
         ]
     },
@@ -102,13 +84,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: __dirname + '/src/main/webapp/index.ejs'
-        }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            Echarts: path.join(__dirname, 'src/main/webapp/echarts.ts'),
-            BigNumber: 'bignumber.js',
-            Swiper: 'swiper'
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['bootstrap', 'angular', 'polyfill', 'thirdparty']

@@ -11,8 +11,8 @@ var SharkConfig = require('./shark-deploy-conf');
 module.exports = {
     entry: {
         bootstrap: [__dirname + '/src/main/webapp/bootstrap.ts', 'webpack-hot-middleware/client?reload=true'],
-        polyfill: ['zone.js/dist/zone', 'reflect-metadata'],
-        thirdparty: ['jquery', 'bignumber.js', 'swiper', 'fastclick']
+        polyfill: ['zone.js/dist/zone', 'reflect-metadata']
+      //add thridpart lib here: thirdparty: ['jquery', 'bignumber.js', 'swiper', 'fastclick']
     },
     output: {
         path: path.join(__dirname, 'build', 'client'),
@@ -62,16 +62,17 @@ module.exports = {
             }, {
                 test: /\.ejs$/,
                 loader: 'ejs-loader'
-            }, {
-                test: require.resolve("jquery"),
-                loader: "expose-loader?$!expose-loader?jQuery"
-            }, {
-                test: require.resolve("bignumber.js"),
-                loader: "expose-loader?BigNumber"
-            }, {
-                test: require.resolve("swiper"),
-                loader: "expose-loader?Swiper"
             }
+            // {
+            //     test: require.resolve("jquery"),
+            //     loader: "expose-loader?$!expose-loader?jQuery"
+            // }, {
+            //     test: require.resolve("bignumber.js"),
+            //     loader: "expose-loader?BigNumber"
+            // }, {
+            //     test: require.resolve("swiper"),
+            //     loader: "expose-loader?Swiper"
+            // }
         ]
     },
     resolve: {
@@ -89,18 +90,18 @@ module.exports = {
             filename: 'index.html',
             template: __dirname + '/src/main/webapp/index.ejs'
         }),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            Echarts: path.join(__dirname, 'src/main/webapp/echarts.ts'),
-            BigNumber: 'bignumber.js',
-            Swiper: 'swiper'
-        }),
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     Echarts: path.join(__dirname, 'src/main/webapp/echarts.ts'),
+        //     BigNumber: 'bignumber.js',
+        //     Swiper: 'swiper'
+        // }),
         new webpack.optimize.CommonsChunkPlugin({
             name: [
                 'bootstrap',
-                'polyfill',
-                'thirdparty'
+                'polyfill'
+                // 'thirdparty'
             ]
         }),
         new ngtools.AotPlugin({
@@ -109,16 +110,16 @@ module.exports = {
         }),
         new AddAssetHtmlPlugin([
             { filepath: require.resolve('./dll/angular.dll.js') },
-            { filepath: require.resolve('./dll/echarts.dll.js') }
+            // { filepath: require.resolve('./dll/echarts.dll.js') }
         ]),
         new webpack.DllReferencePlugin({
             context: __dirname,
             manifest: require(path.join(__dirname, 'dll/angular-manifest.json'))
-        }),
-        new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: require(path.join(__dirname, 'dll/echarts-manifest.json'))
         })
+        // new webpack.DllReferencePlugin({
+        //     context: __dirname,
+        //     manifest: require(path.join(__dirname, 'dll/echarts-manifest.json'))
+        // })
     ],
     devtool: 'source-map' //'cheap-module-source-map' | 'source-map'
-}
+};
