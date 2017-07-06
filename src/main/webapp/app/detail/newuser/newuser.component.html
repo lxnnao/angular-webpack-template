@@ -1,0 +1,9 @@
+<div class="m-detail">
+    <div *ngIf="!data.monthAccountVO">
+        <loading></loading>
+    </div>
+    <data-box-simple [itemList]="data?.dayUserVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.dayAccountVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.monthUserVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.monthAccountVO"></data-box-simple>
+</div>

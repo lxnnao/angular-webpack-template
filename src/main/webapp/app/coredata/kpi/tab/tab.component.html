@@ -1,0 +1,14 @@
+<div class="m-income" *ngIf="itemList && itemList.length>0">
+    <div class="m-item" *ngFor="let item of itemList">
+        <div class="m-item-title" *ngIf="item.title">{{item.title}}</div>
+        <div class="m-item-content">
+            <span *ngIf="!item.countRate" class="u-count {{item.class}}">
+                {{item.count | numerical}}
+            </span>
+            <span *ngIf="item.countRate" class="u-count {{item.class}}">
+                {{item.count | rate}}
+            </span>
+            <span class="u-rate {{item.class}}" [innerHTML]="item.rate | rate:true"></span>
+        </div>
+    </div>
+</div>

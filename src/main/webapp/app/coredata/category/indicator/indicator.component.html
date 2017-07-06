@@ -1,0 +1,42 @@
+
+<div class="u-block swiper-no-swiping">
+	<table class="table table-condensed table-striped table-bordered">
+		<thead>
+			<tr *ngIf="indicator === 1">
+				<th></th>
+				<th>在线SPU数&amp;占比</th>
+				<th>销量&amp;占比</th>
+				<th>流水&amp;占比</th>
+			</tr>
+			<tr *ngIf="indicator === 2">
+				<th></th>
+				<th>访问uv&amp;占比</th>
+				<th>支付人数&amp;占比</th>
+				<th>转化率</th>
+			</tr>
+			<tr *ngIf="indicator === 3">
+				<th></th>
+				<th>各新品spu&amp;占比</th>
+				<th>销量&amp;占比</th>
+				<th>流水&amp;占比</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of itemList;">
+				<td class="table-title">{{item?.name}}</td>
+				<td>{{item?.column1?.count | numerical}}
+					<span class="u-compare" [innerHTML]="item && item.column1 && item.column1.rate | rate"></span>
+				</td>
+				<td>{{item?.column2?.count | numerical}}
+					<span class="u-compare" [innerHTML]="item && item.column2 && item.column2.rate | rate"></span>
+				</td>
+				<td *ngIf="indicator !== 2">{{item?.column3?.count | numerical}}
+					<span class="u-compare" [innerHTML]="item && item.column3 && item.column3.rate | rate"></span>
+				</td>
+				<td *ngIf="indicator === 2">{{item?.column3?.count | rate}}
+					<span class="u-compare" [innerHTML]="item && item.column3 && item.column3.rate | rate"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

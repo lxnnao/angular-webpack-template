@@ -1,0 +1,5 @@
+<div class="tab-head">
+    <div [ngClass]="{active: item.value == model}" class="tab-head-item" *ngFor="let item of itemList;" (click)="tabChange(item)">
+        {{item.name}}
+    </div>
+</div>

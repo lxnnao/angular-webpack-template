@@ -1,0 +1,9 @@
+<div class="m-detail">
+    <div *ngIf="!data.repurchaseVO">
+        <loading></loading>
+    </div>
+    <data-box-simple [itemList]="data?.monthRegisterAndPayVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.activeAndActivationVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.acmlRegisterAndPayVO"></data-box-simple>
+    <data-box-simple [itemList]="data?.repurchaseVO"></data-box-simple>
+</div>

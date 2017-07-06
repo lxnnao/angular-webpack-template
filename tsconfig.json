@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "module": "es2015",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": [
+            "es2016",
+            "dom"
+        ]
+    },
+    "angularCompilerOptions": {
+        "entryModule": "./src/main/webapp/app/app.module#AppModule"
+    }
+}

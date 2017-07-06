@@ -1,0 +1,11 @@
+<div class="m-bottom-tabs">
+	<div [ngClass]="{active: item.value == model.value}" class="u-tab-item text-vertical-middle" *ngFor="let item of itemList;" (click)="tabChange(item)">
+		<div>
+			<a>
+				<img class="u-img-unactive" src="../../../assets/img/time-unactive.png" />
+				<img class="u-img-active" src="../../../assets/img/time-active.png" />
+			</a>
+			<span>{{item.name}}</span>
+		</div>
+	</div>
+</div>

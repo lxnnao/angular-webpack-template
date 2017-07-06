@@ -1,0 +1,51 @@
+<div class="m-coredata-kpi">
+    <div class="m-content">
+        <div [hidden]="timeItem.value===2" class="m-broadcast" #broadcast (click)="toggleTabs();">
+            <div class="m-broadcast-title">
+                <span>主站昨日播报</span>
+                <span class="triangle triangle-right"></span>
+            </div>
+            <div class="m-broadcast-content">
+                <div class="m-broadcast-content-html"></div>
+            </div>
+        </div>
+        <div class="m-block" (click)="openUrl(hrefList?.tab0)">
+            <div class="u-show-detail">
+                <span class="title">流水指标</span>
+                <span class="more">more></span>
+            </div>
+            <div class="u-box">
+                <coredata-kpi-tab [itemList]="data?.overallVO"></coredata-kpi-tab>
+                <coredata-kpi-tab [itemList]="data?.fundflowOverallVO"></coredata-kpi-tab>
+            </div>
+        </div>
+        <div class="m-block" (click)="openUrl(hrefList?.tab1)">
+            <div class="u-show-detail">
+                <span class="title">关键指标</span>
+                <span class="more">more></span>
+            </div>
+            <div class="u-box">
+                <coredata-kpi-tab [itemList]="data?.criticalOverallVO"></coredata-kpi-tab>
+            </div>
+        </div>
+        <div class="m-block" (click)="openUrl(hrefList?.tab2)">
+            <div class="u-show-detail">
+                <span class="title">新消数据</span>
+                <span class="more">more></span>
+            </div>
+            <div class="u-box">
+                <coredata-kpi-tab [itemList]="data?.newUserOverallVO"></coredata-kpi-tab>
+            </div>
+        </div>
+        <div class="m-block" (click)="openUrl(hrefList?.tab3)">
+            <div class="u-show-detail">
+                <span class="title">用户数据</span>
+                <span class="more">more></span>
+            </div>
+            <div class="u-box">
+                <coredata-kpi-tab [itemList]="data?.userOverallVO"></coredata-kpi-tab>
+            </div>
+        </div>
+    </div>
+    <bottom-tab [tabs]="timeConsts" [(model)]="timeItem" (modelChange)="timeItemChange($event);"></bottom-tab>
+</div>

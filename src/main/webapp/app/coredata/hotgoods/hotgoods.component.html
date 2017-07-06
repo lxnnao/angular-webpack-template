@@ -1,0 +1,48 @@
+<div class="m-coredata-hotgoods">
+	<div class="m-coredata-hotgoods-content">
+		<div class="m-spu">
+			<div class="m-spu-value">
+                <div class="u-value-title">
+                    爆品SPU
+                </div>
+                <div class="u-value-num">
+                    {{data?.overallVO?.hotGoodsSPU }}
+                </div>
+            </div>
+            <div class="u-triangle"></div>
+            <div class="m-spu-pv">
+                <div class="u-spu-pv-title">
+                    销量&占比
+                </div>
+                <div class="u-spu-pv-num">
+                    <span class="u-count">{{data?.overallVO?.hotGoodsPV?.count | numerical}}</span> 
+                    <span class="u-rate">{{data?.overallVO?.hotGoodsPVPro | rate}}</span> 
+                </div>
+                <div class="u-spu-pv-pro">
+                    <span class="u-text">环比</span> 
+                    <span class="u-rate" [innerHTML]="data?.overallVO?.hotGoodsPV?.rate | rate:true"></span>
+                </div>
+            </div>
+            <div class="m-spu-account">
+                <div class="u-spu-pv-title">
+                    流水&占比
+                </div>
+                <div class="u-spu-pv-num">
+                    <span class="u-count">{{data?.overallVO?.hotGoodsAccount?.count | numerical}}</span> 
+                    <span class="u-rate">{{data?.overallVO?.hotGoodsAccountPro | rate}}</span> 
+                </div>
+                <div class="u-spu-pv-pro">
+                    <span class="u-text">环比</span> 
+                    <span class="u-rate" [innerHTML]="data?.overallVO?.hotGoodsAccount?.rate | rate:true"></span>
+                </div>
+            </div>
+		</div>
+		<div class="m-top">
+			<div class="m-top-title u-top-title">
+				爆品Top50
+			</div>
+			<coredata-hotgoods-tab [itemList]="data.itemList"></coredata-hotgoods-tab>
+		</div>
+	</div>
+	<bottom-tab [tabs]="timeConsts" [(model)]="timeItem" (modelChange)="timeItemChange($event);"></bottom-tab>
+</div>
