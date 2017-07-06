@@ -1,9 +1,0 @@
-<div class="m-detail">
-    <div *ngIf="!data.thisYearVO">
-        <loading></loading>
-    </div>
-    <data-box [header]="data?.yesterdayVOTotal" [itemList]="data?.yesterdayVO"></data-box>
-    <data-box [header]="data?.thisMonthVOTotal" [itemList]="data?.thisMonthVO"></data-box>
-    <data-box [header]="data?.thisQuarterVOTotal" [itemList]="data?.thisQuarterVO"></data-box>
-    <data-box [header]="data?.thisYearVOTotal" [itemList]="data?.thisYearVO"></data-box>
-</div>

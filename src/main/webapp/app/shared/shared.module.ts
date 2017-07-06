@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 /***********common directive***************/
-import { EchartsDirective } from './directives/echarts.directive';
 /***********common pipe***************/
 import { NumericalPipe } from './pipes/numerical.pipe';
 import { RatePipe } from './pipes/rate.pipe';
@@ -14,7 +13,7 @@ import { Ajax } from './service/ajax.service';
 import { Notice } from './service/notice.service';
 
 
-let directives: Array<any> = [EchartsDirective];
+let directives: Array<any> = [];
 let pipes: Array<any> = [NumericalPipe, RatePipe];
 let modules: Array<any> = [CommonModule, FormsModule, HttpModule];
 let services: Array<any> = [Common, Ajax, Notice];
